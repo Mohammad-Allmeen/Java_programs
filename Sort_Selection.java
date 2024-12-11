@@ -34,7 +34,7 @@ public class Sort_Selection {
     }
            public static void main(String[] args){
      Scanner sc = new Scanner(System.in);
-     System.out.println("Enter the number of element you want to enter");
+     System.out.println("Enter the number of element you want to input");
      int n = sc.nextInt();
      int arr[] = new int[n];
      for (int i = 0; i < n; i++) {
