@@ -1,6 +1,8 @@
-public class RomanToInteger {
+public class RomanToInteger 
+{
     public int getValue(char ch){
-        switch(ch){
+        switch(ch)
+        {
             case 'I': return 1;
             case 'V': return 5;
             case 'X': return 10;
@@ -11,15 +13,19 @@ public class RomanToInteger {
             default : return 0;
         }
     }
-    public int romanToInt(String s) {
+    public int romanToInt(String s) 
+    {
         int n= s.length();
         int sum=0;
-     for(int i=0;i<n;i++){
+     for(int i=0;i<n;i++)
+    {
         int value= getValue(s.charAt(i));
-
-        if((i+1)<n && value>=getValue(s.charAt(i+1))){
+        if((i+1)<n && value>=getValue(s.charAt(i+1)))
+        {
             sum=sum+value;
-        }else{
+        }
+        else
+        {
             sum=sum-value;
         }
      } 

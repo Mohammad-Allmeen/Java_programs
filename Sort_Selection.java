@@ -5,27 +5,23 @@ import java.util.*;
 public class Sort_Selection {
 
     public static void SelectionSort(int arr[], int n, int arr2[]){
-        int minIndex =0;
-        for (int i = 0; i < n-1; i++) {
-            minIndex=i;
-         for(int j=i+1;j<n;j++){
-            if(arr[j]< arr[minIndex])
-            {
-                minIndex = j;
+       int minIndex=0;
+    for (int i = 0; i < n-1; i++) {
+        minIndex=i;
+        for (int j = i+1; j <n; j++) {
+            if (arr[minIndex]>arr[j]) {
+                minIndex=j;
             }
-        }
-            int temp = arr[minIndex];
+            int temp=arr[minIndex];
             arr[minIndex]= arr[i];
-            arr[i]=temp; 
+            arr[i]=temp;
         }
-    
+    }
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
-
-
      //Sorting with Arrays.sort function and using different loop
-     System.out.println("Sorting with Arrays.sort function and using different loop");
+     System.out.println("Sorting with Arrays sort function and using different loop");
         Arrays.sort(arr2);
         for(int num : arr2){
             System.out.println(num +" ");
@@ -50,3 +46,22 @@ public class Sort_Selection {
       
     }
 }
+
+/*
+         int minIndex =0;
+        for (int i = 0; i < n-1; i++) {
+            minIndex=i;
+         for(int j=i+1;j<n;j++){
+            if(arr[j]< arr[minIndex])
+            {
+                minIndex = j;
+            }
+        }
+            int temp = arr[minIndex];
+            arr[minIndex]= arr[i];
+            arr[i]=temp; 
+        }
+ */
+
+
+ 

@@ -10,25 +10,22 @@ import java.util.Scanner;
 
 public class Search_Binary {
     public static int check(int arr[], int s){
-        Arrays.sort(arr);
-        int start =0;
-        int end= arr.length-1;
-      int mid=0;
-        while(start<=end){
-            //mid= (start+end)/2;
-
-            // Optimized way to find the mid to avoid interger overflow condition
-            // as when data will be large the start and end value can be intgers maximum value that an Integer datatype can hold and when both will be added it will overflow the capacity of the integer
-            mid= start +(end-start)/2; 
-
-                if(s<arr[mid]){
-                    end= mid-1;
-                }else if(s>arr[mid]){
-                    start= mid+1;
-                }else{
-                    return mid;
-                }
-        }
+         int start =0;
+         int end= arr.length-1;
+         Arrays.sort(arr);
+         int mid=0;
+         while(start<end){
+            mid= start+ (end-start)%2;
+            if(s<arr[mid]){
+              end=mid-1; 
+            }else if(s>arr[mid]){
+                start= mid+1;
+            }
+            else{
+                return mid;
+            }
+         }
+      
         return -1;
     }
     
@@ -64,4 +61,25 @@ public class Search_Binary {
 
     }
 }
+
+/*  Arrays.sort(arr);
+        int start =0;
+        int end= arr.length-1;
+      int mid=0;
+        while(start<=end){
+            //mid= (start+end)/2;
+
+            // Optimized way to find the mid to avoid interger overflow condition
+            // as when data will be large the start and end value can be intgers maximum value that an Integer datatype can hold and when both will be added it will overflow the capacity of the integer
+            mid= start +(end-start)/2; 
+
+                if(s<arr[mid]){
+                    end= mid-1;
+                }else if(s>arr[mid]){
+                    start= mid+1;
+                }else{
+                    return mid;
+                }
+        }
+        return -1; */
 
