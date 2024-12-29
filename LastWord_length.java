@@ -12,6 +12,6 @@ public class LastWord_length {
     }
     public static void main(String [] args){
         String s= "Hello World";
-       int len= lengthOfLastWord(s);
+        int len= lengthOfLastWord(s);
     }
 }
