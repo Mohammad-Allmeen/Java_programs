@@ -13,7 +13,7 @@ public class Tech_number {
     if(count%2==0){
         int pow= count/2;
         second_half= dig% (int)(Math.pow(10, pow));//(int) because Math.pow return double datatype
-        first_half = dig/ (int) (Math.pow(10, pow));
+        first_half = dig/ (int)(Math.pow(10, pow));
         total = (first_half+second_half)*(first_half+second_half);
     }
     if(total ==dig){

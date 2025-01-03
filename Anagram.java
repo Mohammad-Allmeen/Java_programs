@@ -1,6 +1,56 @@
 
-
 import java.util.*;
+class Anagram{
+public static boolean check_Anagram(String s1, String s2){
+  if(s1.length()!=s2.length()){
+    System.out.println("Length of two string must be Equal");
+    return false;
+  }
+  char c1[]= s1.toCharArray();
+  char c2[]= s2.toCharArray();
+
+  Arrays.sort(c1);
+  Arrays.sort(c2);
+  for (int i = 0; i < c2.length; i++) {
+    if(c1[i]!=c2[i]){
+      return false;
+    }
+  }
+return true;
+}
+
+public static void main(String [] args){
+  Scanner sc= new Scanner(System.in);
+  System.out.println("Enter the first String");
+  String s= sc.nextLine();
+  System.out.println("Enter the second String ");
+  String s2= sc.nextLine();
+  if(check_Anagram(s, s2)){
+    System.out.println("Anagram");
+  }else{
+    System.out.println("Not Anagram");
+  }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
 class Anagram{
     public static boolean checkAnagram(String str1, String str2){
@@ -43,3 +93,4 @@ class Anagram{
        }
     }
 }
+    */

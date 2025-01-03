@@ -3,19 +3,15 @@ import java.util.Scanner;
 public class Armstrong{
     
    public static boolean armstrong_check(int num){
-    String value= Integer.toString(num);
-        int len= value.length();
-     int sum= 0;
-     int temp=num;
-        while(num!=0){
-            int digit = num%10;
-            sum+= Math.pow(digit, len);
-            num/=10;
-        }
-        if(temp==sum){
-        return true;
-        }
-        
+    int value =num;
+    String s= Integer.toString(num);
+    int len= s.length();
+    int sum=0;
+     while(num!=0){
+     int rem = num/10;
+     sum+=Math.pow(rem, len);
+     num/=10;
+     }
     return false;
    }
     public static void main(String [] args){

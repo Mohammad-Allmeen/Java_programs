@@ -11,14 +11,15 @@ public class ArrayTo_String
              arr[i]= sc.nextLine();
         }
          String string2= "";
-         StringBuilder string = new StringBuilder();
+         StringBuilder str = new StringBuilder();
         for (int j = 0; j < arr.length; j++) {
             
-            string=string.append(arr[j]).append(" ");
+            str= str.append(arr[j]).append(" ");
+            
             //second method
             string2= string2 +arr[j]+" ";
         }
-      System.out.println(string);
+      System.out.println(str);
       System.out.println(string2);
 
     }

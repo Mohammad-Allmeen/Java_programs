@@ -8,7 +8,7 @@ public class Delete_word
     for (int i = 0; i < arr.length; i++) {
         if(!arr[i].equals(deleString))
         {
-            newSent = newSent.append(arr[i]).append(" ");
+            newSent= newSent.append(arr[i]).append(" ");
         }
     }
     System.out.println(newSent);
