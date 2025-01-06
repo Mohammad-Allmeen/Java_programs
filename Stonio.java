@@ -1,5 +1,5 @@
-/*1386*2=2772, we observe that at tens and hundreds place digits are the same. Hence, 1386 is a strontio number. 
-1221*2=2442, digits at tens and hundreds place are the same. Hence, 1221 is a strontio number.
+/*1386*2=2772, we observe that at tens and hundreds place digits are the same. Hence, 1386 is a stonio number. 
+1221*2=2442, digits at tens and hundreds place are the same. Hence, 1221 is a stonio number.
 
  */
 
