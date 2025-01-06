@@ -11,6 +11,8 @@ public class Odious {
     int dig=0;
         while (n>0){
             int rem= n%2;
+            System.out.println(rem);
+            //how to find the binary digit of a number
             n= n/2;
             dig+=rem;
         }
