@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BinaryRepresentation {
+public class DecToBinary {
     public static String findBinary(int number) {
         // Special case for 0
      if(number==0){

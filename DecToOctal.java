@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class DecToOctal {
     public static String decToOct(int value){
+        System.out.println("Hex String = " + Integer.toHexString(value));
         StringBuilder result = new StringBuilder();
         while(value>0){
             int rem= value%8;
@@ -15,7 +16,7 @@ public class DecToOctal {
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         int dec= sc.nextInt();
-        System.out.println("The decimal value is "+ decToOct(dec));
+        System.out.println("The octal value is "+ decToOct(dec));
     }
     
 }
