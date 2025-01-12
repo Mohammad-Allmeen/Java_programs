@@ -9,7 +9,7 @@ public class Parenthesis_check {
         return s.isEmpty();
             }
             public static void main(String [] args){
-                String s= "[]{}}";
+                String s= "[()]{}";
                 boolean check = isValid(s);
                 if(check){
                     System.out.println("Valid Parenthesis");

@@ -15,7 +15,7 @@ public class ArrayTo_String
         for (int j = 0; j < arr.length; j++) {
             
             str= str.append(arr[j]).append(" ");
-            
+
             //second method
             string2= string2 +arr[j]+" ";
         }

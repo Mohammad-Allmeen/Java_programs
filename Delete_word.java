@@ -2,17 +2,19 @@ import java.util.Scanner;
 
 public class Delete_word 
 {
-    public static void delete_word(String sentence, String deleString){
-    String arr[] = sentence.split(" ");
-    StringBuilder newSent = new StringBuilder();
+public static String delete_word(String sentence, String delWord){
+    StringBuilder newSet = new StringBuilder();
+    String nSent= "";
+    String arr[]= sentence.split(" ");
     for (int i = 0; i < arr.length; i++) {
-        if(!arr[i].equals(deleString))
-        {
-            newSent= newSent.append(arr[i]).append(" ");
+        if(!arr[i].equals(delWord)){
+         nSent = nSent+ arr[i]+" ";
+         newSet= newSet.append(arr[i]).append(" ");
         }
     }
-    System.out.println(newSent);
-    }
+    return newSet.toString();
+}
+    
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the sentence");
