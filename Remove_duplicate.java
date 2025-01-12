@@ -26,26 +26,29 @@ public class Remove_duplicate {
 //Second Method by brute force
 
 public static int [] remove_duplicate(int arr[]){
-    int len= arr.length;
+
+    int len = arr.length;
     int temp[]= new int[len];
      int count=0;
-     for (int i = 0; i <len; i++) {
-        boolean isDup= false;
-        for (int j = 0; j < count; j++) {
-            if(arr[i]==temp[j])
-            isDup= true;
+    for (int i = 0; i < len; i++) {
+      boolean isDup = false;
+      for (int j = 0; j <count; j++) {
+        if(arr[i]==arr[j]){
+            isDup=true;
             break;
         }
-        if(!isDup){
-            temp[count]= arr[i];
-            count++;
-        }
-     }
-     int finalResult[]= new int[count];
-     for (int i = 0; i < count; i++) {
+      }
+      if(!isDup){
+        temp[count]= arr[i];
+        count++;
+      }  
+    }
+
+    int index=0;
+    int finalResult[] = new int[count];
+    for (int i = 0; i < count; i++) {
         finalResult[i]= temp[i];
-     }
-     Arrays.sort(finalResult);
+    }
     return finalResult;
 }
 
