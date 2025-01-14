@@ -23,7 +23,7 @@ public class Remove_duplicate {
   return result;
   }
 
-//Second Method by brute force
+//Second Method by Brute force
 
 public static int [] remove_duplicate(int arr[]){
 

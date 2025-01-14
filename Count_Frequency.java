@@ -45,16 +45,16 @@ public class Count_Frequency {
 
 
    public static void main(String[] args){
-    // Scanner sc = new Scanner (System.in);
-    // int arr[]= new int[7];
-    // for (int i = 0; i < arr.length; i++) {
-    //     arr[i]= sc.nextInt();
-    // }
-    // frequency(arr);
+    Scanner sc = new Scanner (System.in);
+    int arr[]= new int[7];
+    for (int i = 0; i < arr.length; i++) {
+        arr[i]= sc.nextInt();
+    }
+    frequency(arr);
 
 
-    // String str= "Alhamdulillah for Everything 12";
-    // frequencyLetter(str);
+    String str= "Alhamdulillah for Everything 12";
+    frequencyLetter(str);
 
  
 
