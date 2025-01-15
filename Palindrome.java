@@ -1,4 +1,5 @@
-public class Palindrome {
+class Palindrome {
+
     public static boolean palindrome_number(int n){
         int num_check=n;
         int pal=0;
@@ -18,6 +19,7 @@ public class Palindrome {
         for (int i = str.length()-1; i >=0; i--) {
           pal_str= pal_str+ str.charAt(i);  
         }
+        System.out.println(pal_str);
         if(pal_str.equals(str)){
             System.out.println("String is Palindrome");
         }
@@ -27,7 +29,8 @@ public class Palindrome {
         if (palindrome_number(n)){
             System.out.println("Palindrome");
         }
-        String str="madan";
+
+        String str="Tech Mahindra";
         palindrome_string(str);
         
 

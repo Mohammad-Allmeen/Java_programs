@@ -11,7 +11,6 @@ public class Repeating_element{
             if(!visited.contains(arr[i]))
             {
             int count =1; 
-
             for (int j = 0; j < arr.length; j++) {
                 if(j!=i && arr[i]==arr[j]){
                   count++;

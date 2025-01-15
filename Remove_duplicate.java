@@ -9,19 +9,16 @@ public class Remove_duplicate {
   {
 
   LinkedHashSet<Integer> set = new LinkedHashSet<>();
-
- for(int num : arr){
-    set.add(num);
- }
- int index=0;
- int result[] = new int[set.size()];
- for(int num: set){
-    result[index]=num;
-    index++;
- }
- Arrays.sort(result);
-  return result;
+  for (int num: arr){
+   set.add(num);
   }
+  int arr1[]= new int[set.size()];
+  int index=0;
+  for(int num: set){
+  arr1[index++]= num;
+  }
+  return arr1 ;
+}
 
 //Second Method by Brute force
 
@@ -33,7 +30,7 @@ public static int [] remove_duplicate(int arr[]){
     for (int i = 0; i < len; i++) {
       boolean isDup = false;
       for (int j = 0; j <count; j++) {
-        if(arr[i]==arr[j]){
+        if(arr[i]==arr[j]&& i!=j){
             isDup=true;
             break;
         }
@@ -134,3 +131,15 @@ public static String [] duplicateString(String arr[])
 
   }
 }
+
+
+
+
+
+
+
+
+
+/*
+ 
+ */
