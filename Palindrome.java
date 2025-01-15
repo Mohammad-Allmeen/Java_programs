@@ -25,7 +25,7 @@ class Palindrome {
         }
     }
     public static void main(String [] args){
-        int n = 458;
+        int n = 454;
         if (palindrome_number(n)){
             System.out.println("Palindrome");
         }
