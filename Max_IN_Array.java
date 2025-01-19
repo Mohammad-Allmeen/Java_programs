@@ -1,3 +1,6 @@
+//this is the keyword which is use to refer to the current object of the class
+//this refers to the last object that is created/ means just before object
+
 import java.util.Scanner;
 
 public class Max_IN_Array {

@@ -12,8 +12,7 @@ public class DecToHex {
           ch='B';
           break;
           case 12:
-          ch='C';
-          break;
+          return 'C'; //we can use return also 
           case 13:
           ch='D';
           break;
@@ -21,8 +20,8 @@ public class DecToHex {
           ch='E';
           break;
           case 15:
-          ch='F';
-          break;
+          return 'F';
+         // break;
           default:
           ch='0';
       }

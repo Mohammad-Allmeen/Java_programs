@@ -16,8 +16,9 @@ public class Ap_Gp {
         for (int i = 0; i < n-2; i++) {
             int t= lt*2;
             lt=t;
+            System.out.println(lt);
         }
-        System.out.println(lt);
+        
 
         int a=3;
         int r=5;

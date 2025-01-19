@@ -3,19 +3,19 @@ import java.util.*;
 public class Remove_duplicate {
 
   
-//Method for removing the duplicates in the Integer Array by using HashSet
+//Method for removing the duplicates in the Integer Array by using LinkedHashSet as it store unique value with order
 
   public static int [] duplicate(int arr[])
   {
 
-  LinkedHashSet<Integer> set = new LinkedHashSet<>();
-  for (int num: arr){
-   set.add(num);
-  }
-  int arr1[]= new int[set.size()];
+ LinkedHashSet<Integer> set = new LinkedHashSet<>();
+ for(int num: arr){
+  set.add(num);
+ }
   int index=0;
-  for(int num: set){
-  arr1[index++]= num;
+  int arr1[] = new int[set.size()];
+  for (int i : set) {
+    arr1[index++]= i;
   }
   return arr1 ;
 }
@@ -30,7 +30,7 @@ public static int [] remove_duplicate(int arr[]){
     for (int i = 0; i < len; i++) {
       boolean isDup = false;
       for (int j = 0; j <count; j++) {
-        if(arr[i]==arr[j]&& i!=j){
+        if(arr[i]==arr[j] && i!=j){
             isDup=true;
             break;
         }
@@ -41,7 +41,6 @@ public static int [] remove_duplicate(int arr[]){
       }  
     }
 
-    int index=0;
     int finalResult[] = new int[count];
     for (int i = 0; i < count; i++) {
         finalResult[i]= temp[i];
@@ -74,29 +73,30 @@ public static String [] duplicateString(String arr[])
   // Second method for removing the duplicate in the String 
 
   public static String[] stringDuplicate(String arr[]){
-    int len= arr.length;
-    String temp[]= new String[len];
-    int count=0;
-    for (int i = 0; i < len; i++) {
-        boolean isDup= false;
-        for (int j = 0; j <count ; j++) {
-            if(arr[i].equals(temp[j])){
-                isDup= true;
-                break;
-            }
-        }
-        if(!isDup){
-            temp[count]= arr[i];
-            count++;
-        }
 
+int len= arr.length;
+int count=0;
+String temp[] = new String[len];
+for (int i = 0; i < len; i++) {
+  boolean check = false;
+  for (int j = 0; j < count; j++) {
+    if(arr[i].equals(temp[j])){
+      check= true;
+      break;
     }
-    
-    String result[]= new String[count];
-    for (int i = 0; i < count; i++) {
-        result[i]= temp[i];
-     }
-    return result;
+  }
+  if(!check){
+    temp[count]=arr[i];
+    count++;
+  }
+}
+
+String finalResult[]= new String[count];
+for (int i = 0; i < finalResult.length; i++) {
+  finalResult[i]= temp[i];
+  System.out.print(temp[i]+ " ");
+}
+return finalResult;
   }
 
 
@@ -115,18 +115,19 @@ public static String [] duplicateString(String arr[])
    int finalResult[]= remove_duplicate(arr);
     System.out.println("The result of the second method is "+ Arrays.toString(finalResult) );
 
-
+   System.out.println();
     // method for removing the duplicate String
 
     String str="today is a fabulous day today";
 
     String strArr[]= str.split(" ");
     String result[]=duplicateString(strArr);
-    System.out.println("The result of removing duplicate in the String is : " + Arrays.toString(result));
+    System.out.println("The result of removing duplicate in the String by using LinkedHashSet is : " + Arrays.toString(result));
 
-
+    System.out.println();
     String dupRemove[]= stringDuplicate(strArr);
-    System.out.println("The result of removing duplicate String by Second method is : " +Arrays.toString(dupRemove));
+    System.out.println();
+    System.out.println("The result of removing duplicate String by Brute force method is : " +Arrays.toString(dupRemove));
 
 
   }
@@ -139,7 +140,3 @@ public static String [] duplicateString(String arr[])
 
 
 
-
-/*
- 
- */

@@ -1,8 +1,7 @@
 public class RomanToInteger 
 {
-    public int getValue(char ch){
-        switch(ch)
-        {
+    public static int getValue(char ch){
+        switch (ch){
             case 'I': return 1;
             case 'V': return 5;
             case 'X': return 10;
@@ -13,22 +12,43 @@ public class RomanToInteger
             default : return 0;
         }
     }
-    public int romanToInt(String s) 
+    public static int romanToInt(String s) 
     {
-        int n= s.length();
+        int len= s.length();
         int sum=0;
-     for(int i=0;i<n;i++)
-    {
-        int value= getValue(s.charAt(i));
-        if((i+1)<n && value>=getValue(s.charAt(i+1)))
-        {
-            sum=sum+value;
+        for (int i = 0; i < len; i++) {
+            int v= getValue(s.charAt(i));
+            if(i+1<len &&v>= getValue(s.charAt(i+1))){
+                 sum=sum+v;
+            } else{
+                sum= sum-v;
+            }
         }
-        else
-        {
-            sum=sum-value;
-        }
-     } 
-     return sum;  
+      return sum;
+    }
+    public static void main(String[] args){
+        String roman= "XVIMC";
+        int sum= romanToInt(roman);
+        System.out.println(sum);
+
     }
 }
+
+/* 
+int n= s.length();
+int sum=0;
+for(int i=0;i<n;i++)
+{
+int value= getValue(s.charAt(i));
+if((i+1)<n && value>=getValue(s.charAt(i+1)))
+{
+    sum=sum+value;
+}
+else
+{
+    sum=sum-value;
+}
+} 
+return sum;
+
+*/

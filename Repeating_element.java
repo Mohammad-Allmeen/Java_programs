@@ -1,3 +1,5 @@
+//ArrayList order is there because it uses Indexing
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 
@@ -22,11 +24,9 @@ public class Repeating_element{
             }
         
             visited.add(arr[i]);
+        }     
         }
-            
-            
-        }
-      LinkedHashSet<Integer> check = new LinkedHashSet<>();
+        LinkedHashSet<Integer> check = new LinkedHashSet<>();
         for(int num:arr){
           check.add(num);
         }
