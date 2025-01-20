@@ -1,7 +1,4 @@
 
-
-
-
 public class LCM_HCF {
     public static void h_CF(){
         int n1=80, n2=40;
@@ -16,7 +13,7 @@ public class LCM_HCF {
    public static void main(String[] args){
     int n1=8;
     int n2=12;
-    int i=8;
+    int i=12;
     boolean check=false;
     
         
