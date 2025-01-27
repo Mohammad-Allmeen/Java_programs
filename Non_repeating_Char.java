@@ -11,7 +11,7 @@ public class Non_repeating_Char {
            count++;
             }
         }
-        if(count>1){
+        if(count==1){
             System.out.print(s.charAt(i));
         }
      }

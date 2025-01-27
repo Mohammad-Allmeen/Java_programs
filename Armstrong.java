@@ -3,21 +3,25 @@ import java.util.Scanner;
 public class Armstrong{
     
    public static boolean armstrong_check(int num){
-    int value =num;
+    int check=num;
     String s= Integer.toString(num);
     int len= s.length();
     int sum=0;
      while(num!=0){
-     int rem = num/10;
-     sum+=Math.pow(rem, len);
+     int rem = num%10;
+     sum=sum+ (int) Math.pow(rem, len);
      num/=10;
      }
+     if(sum==check){
+        return true;
+     }
+     
     return false;
    }
     public static void main(String [] args){
         Scanner sc = new Scanner (System.in);
         int num = sc.nextInt();
-     
+        
        // ob1.armstrong_check(number);
         if (armstrong_check(num))
         {

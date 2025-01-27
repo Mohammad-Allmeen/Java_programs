@@ -16,8 +16,6 @@ public class BinarytoDecimal {
         Scanner sc = new Scanner(System.in);
         int bin= sc.nextInt();
         System.out.println("The decimal value is "+ binToDec(bin));
-
-
     }
     
 }

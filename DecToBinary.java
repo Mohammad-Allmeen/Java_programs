@@ -2,17 +2,13 @@ import java.util.Scanner;
 
 public class DecToBinary {
     public static String findBinary(int number) {
-        // Special case for 0
-     if(number==0){
-     return "";
-    }
-    StringBuilder result = new StringBuilder();
-    while(number>0){
-        int rem= number%2;
-        result.append(rem);
-        number/=2;
+        StringBuilder result = new StringBuilder();
 
-    }
+     while (number!=0){
+     int rem= number%2;
+     result= result.append(rem);
+     number/=2;
+     }
     return result.reverse().toString();
     }
     public static void main(String[] args) {
@@ -25,3 +21,26 @@ public class DecToBinary {
         System.out.println("The binary representation of " + number + " is: " + binaryRepresentation);
     }
 }
+
+
+
+
+
+
+
+
+
+/*
+ *     // Special case for 0
+     if(number==0){
+     return "";
+    }
+    StringBuilder result = new StringBuilder();
+    while(number>0){
+        int rem= number%2;
+        result.append(rem);
+        number/=2;
+
+    }
+    return result.reverse().toString();
+ */

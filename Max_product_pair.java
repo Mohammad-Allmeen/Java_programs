@@ -6,7 +6,6 @@ class Max_product_pair{
                 int sec= 0;
                 int temp=1;
                 int pro_final=1;
-        int arr1[]= new int[2];
         for (int i = 0; i < arr.length-1; i++) {
            for (int j = i+1; j < arr.length; j++) {
             temp= arr[i]*arr[j];
@@ -22,7 +21,6 @@ class Max_product_pair{
           
        } 
         pro_final= Math.max(pro_final, pro);
-        
        
         }
         System.out.println(pro_final);

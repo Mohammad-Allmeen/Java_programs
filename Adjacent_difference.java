@@ -19,7 +19,8 @@ Output
 
 Explanation
 
-The first parameter 7 is the size of the array. Next is an array of integers and input 5 is the position from where you have to calculate the Total Sum. The output  is 25 as per calculation below. 
+The first parameter 7 is the size of the array. Next is an array of integers and 
+input 5 is the position from where you have to calculate the Total Sum. The output is 25 as per calculation below. 
 | 26-13 | = 13
 | 14-26 | =  12
 Total Sum = 13 + 12 = 25
@@ -29,7 +30,7 @@ Total Sum = 13 + 12 = 25
 public class Adjacent_difference {
    public static void main(String[] args){
     int sum=0;
-    int arr[]={3,7,4,8,9,1,9, 5};
+    int arr[]={3,7,4,8,9,1,9,5};
     for (int i = 5-1; i < arr.length-1; i++) {
      int diff= arr[i]-arr[i+1];
      diff=Math.abs(diff);
