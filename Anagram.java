@@ -19,6 +19,7 @@ for (int i = 0; i < ch1.length; i++) {
     return false;
   }
 }
+System.out.println(Arrays.equals(ch1,ch2));// function to check to arrays are equals
 return true;
 }
 
