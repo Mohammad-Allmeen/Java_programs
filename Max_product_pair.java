@@ -1,6 +1,19 @@
+import java.util.Arrays;
+
 class Max_product_pair{
     public static void main(String[] args){
         int arr[] = {1, 20, -10, -30, 50, 2, 60,3};
+        Arrays.sort(arr);
+        int len= arr.length;
+        System.out.println(len);
+        int last= arr[len-1];
+        int secLst= arr[len-2];
+
+        System.out.println(last*secLst);
+
+
+        //second method to find pair that maximum product of an array
+
         int pro=1;
         int first=0;
                 int sec= 0;
