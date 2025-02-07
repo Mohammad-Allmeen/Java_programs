@@ -26,15 +26,15 @@ public class Substring_check {
     
     int len1= str.length(), len2= sub.length();
     
-    for (int i = 0; i < str.length(); i++) {
-        int j=0;
-        while(j< len2 && str.charAt(i+j)==sub.charAt(j) ){
+ for (int i = 0; i < len1; i++) {
+    int j=0;
+    if(j<len2 && str.charAt(i+j)== sub.charAt(j) ){
         j++;
-        }
-        if(j==len2){
-            return i;
-        }
     }
+    if(j==len2){
+    return i;
+    }
+ }
 
     return -1;
 }

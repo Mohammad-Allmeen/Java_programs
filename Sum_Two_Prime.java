@@ -1,3 +1,5 @@
+// Program to represent the number in two prime number sum example 74= 71+3 both are prime
+
 public class Sum_Two_Prime {
     
     public static boolean isPrime(int num){

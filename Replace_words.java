@@ -15,16 +15,18 @@ public class Replace_words {
 
     public static String replace(String str){
     String rep= "cat";
-   String ars[]= str.split(" ");
+    str.trim();
+    String arr[]= str.split(" ");
 
-   StringBuilder newStr= new StringBuilder();
-   for(int i=0;i<ars.length;i++){
-    if(ars[i].equals("fox")){
-    newStr= newStr.append(rep).append(" ");
-    }else{
-        newStr= newStr.append(ars[i]).append(" ");
+    StringBuilder newStr= new StringBuilder();
+    for (int i = 0; i < arr.length; i++) {
+        if(arr[i].equals(rep)){
+            newStr= newStr.append(rep).append(" ");
+        }else{
+            newStr= newStr.append(arr[i]).append(" ");
+        }
+        
     }
-   }
    return newStr.toString();
     }
     public static void main(String[] args){

@@ -1,8 +1,13 @@
+import java.util.Arrays;
+
 public class Second_largest {
     public static void main(String []args ){
         int arr[]={1,2,3,4,5,6};
         int max = arr[0];
+        Arrays.sort(arr);// 1st Method by sorting and finding the second last index value
+        System.out.println(arr[arr.length-2]);
 
+       // 2nd Method
         for(int i=0;i<arr.length;i++){
             if (arr[i]>max){
                 max=arr[i];

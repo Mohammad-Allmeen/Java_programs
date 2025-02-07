@@ -6,6 +6,7 @@ class Palindrome {
         while(n!=0){
             int rem = n%10;
             pal = pal*10+rem;
+            
             n/=10;
         }
         if(num_check==pal){

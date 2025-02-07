@@ -5,7 +5,7 @@
 
 public class Stonio {
     public static void main(String[] args){
-        int n=3013;
+        int n=1386;
         n=n*2;
         n=n/10;
         int tens=n%10;

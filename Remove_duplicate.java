@@ -55,8 +55,8 @@ public static String [] duplicateString(String arr[])
 
   LinkedHashSet<String> set= new LinkedHashSet<>();
 
-  for(String str: arr){
-    set.add(str);
+  for (String it: arr){
+    set.add(it);
   }
 
   String result[] = new String[set.size()];

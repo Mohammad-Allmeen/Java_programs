@@ -18,6 +18,12 @@ public class String_to_Array {
     Scanner sc = new Scanner(System.in);
     String str= sc.nextLine();
     reverse(str);
+
+    String str1= "Hello ";
+    String s[]= str1.split(" ");
+   
 }
 }
 
+//when method is final in java you will not be able to override 
+//when there is static class in java you cannot inherit it

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Binary_serach {
+public class Binary_search {
 public static void bubble_sort(int arr[]){
     int n= arr.length;
     for (int i = 0; i < n; i++) {
