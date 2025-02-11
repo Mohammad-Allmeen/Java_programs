@@ -12,7 +12,8 @@ public class Supercoder {
     String arr[]= s.split("");
     Arrays.sort(arr);
     String ans="";
-    if(arr[0].equals("0")){
+    if(arr[0].equals("0"))// == cannot be used because it is String and for string always use .equals 
+    {
         ans = arr[1]+arr[0];
     }
     String sec="";
