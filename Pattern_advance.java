@@ -87,33 +87,36 @@ public class Pattern_advance {
         }
     }
 
+    // DIAMOND PATTERN
+
     public static void diamond_pattern(){
         int n=5;
+        System.out.println();
+        System.out.println("DIAMOND PATTERN");
      for (int i = 1; i <=5; i++) {
         for (int j = 1; j<=n-i; j++) {
             System.out.print("  ");
         }
-        for (int j = 1; j <=i; j++) {
+        for (int j = 1; j <=2*i-1; j++) {
           System.out.print("* ");  
-        }
-        for (int j =2 ; j<=i; j++) {
-            System.out.print("* ");
         }
         System.out.println();
      }
-     for (int i = 5; i >=i; i--) {
-        for (int j = n-i; j>=1; j--) {
-            System.out.print("  ");
+
+     for (int i = 5; i>=1; i--) {
+        for (int j = 1; j<=n-i; j++) {
+            System.out.print("  "); 
         }
-        for (int j = 1; j <=i; j++) {
-          System.out.print("* ");  
+        for (int j =1; j <=2*i-1; j++) {
+           System.out.print("* "); 
         }
-        for (int j =i-2 ; j>=1; j--) {
-            System.out.print("* ");
-        }
-        System.out.println();
+System.out.println();
+      
      }
+
     }
+  
+     
     public static void main(String args[]){
      butterfly_pattern();
      solid_rhombus();
