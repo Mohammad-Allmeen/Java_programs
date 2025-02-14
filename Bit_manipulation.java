@@ -27,18 +27,18 @@ public class Bit_manipulation {
         int bitmask= 1<<pos; //0100
 
         if((bitmask &n)==0){ // 0101 AND 0100 = 0100 -> therefore at the third pos the bit is one 
-       System.out.println("the Bit iszero ");
+       System.out.println("The Bit is at third position is zero ");
         } else{
-            System.out.println("The Bit is One");
+            System.out.println("he Bit is at third position is One");
         }
 
        // To know about the second position
        bitmask= 1<<1; //0010
 
         if((n&bitmask)==0){ // 0101(5) AND 0010(bitmas) the result is 0000 therefore the bit will zero
-            System.out.println("Bit is zero");
+            System.out.println("The Bit at second position is zero");
         } else{
-            System.out.println("Bit is one");
+            System.out.println("The Bit at second position is one");
         }
     }
 
@@ -47,15 +47,18 @@ public class Bit_manipulation {
      int bitmask= 1<<3; //1000
 
      int ans= n | bitmask;//  101 OR 1000 -> 1101 ANS performing OR operation will result in adding one to that particular bit
-     System.out.println(ans); 
+     System.out.println("The set operation of the bit is "+ ans); 
     }
 
     public static void clearBITOPERATION(){
-        int n=5; // 0101
-        int bitmask= 0; //0000
-   
-        int ans= n & bitmask;//  0101 OR 1000 -> 1101 ANS performing OR operation will result in the changing of that particular bit
-        System.out.println(ans); 
+        int n=5; // 0101 if you want to convert it into 0001
+        int bitmask= 1<<2; //0000
+        bitmask= ~bitmask;
+
+        int result = n & bitmask;
+        System.out.println(result);
+     
+        
        }
 
        public static void updateBITOPERATION(){
@@ -73,9 +76,9 @@ public class Bit_manipulation {
 
         int n1=6;
         int bitmask2= 1<<1;
-        bitmask2 = ~bitmask2; // compliment of 2(010) that 5(101)
+        bitmask2 = ~bitmask2; // compliment of 2(010) is 5(101)
         
-        int ans1= n1 & bitmask2;
+        int ans1= n1 & bitmask2; // 6(110) AND 5(101) is 4(100)
         System.out.println("The bit updated from "+n1+ " to " + ans1);
        }
     public static void main(String[] args){
