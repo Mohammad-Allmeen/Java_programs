@@ -12,7 +12,7 @@ Recursion are used in various fields for example
 
 In Recursion every time the function is called a new memory is created for every varibale present inside the function
 This is the reason recursion used a lot of memory.
-This is theReason if the base case is not written and recursion is called infinite times the memory gets full and it
+This is the Reason if the base case is not written and recursion is called infinite times the memory gets full and it
 creates the situation of Statck Overflow
 
 */
@@ -37,9 +37,52 @@ public class Recursion {
         }
     }
     
+    public static void sum_Natural_Number(int i,int n, int sum){
+     if(i==n){
+       sum+=i;
+       System.out.println(sum);
+       return;
+     }else{
+        sum+=i;
+        i++;
+       sum_Natural_Number(i, n, sum);
+     }
+     System.out.print(i+" "); // this will print all the i value as in the stack the memory created for every function called is removed till it reaches the initial value
+    }
+
+    // public static void factorial(int n, int fact){
+        
+    //     if(n==0){
+    //         System.out.println("factorial is "+ fact);
+    //     }
+    //     else{
+    //         fact= fact*n;
+    //         factorial(n-1, fact);
+    //     }
+    // }
+
+    public static int factorial(int n){
+        
+        if(n==0|| n==1){
+            return 1;
+        }
+        
+       int fact_num= factorial(n-1);
+       int fact_n= n* fact_num;
+       return fact_n;
+    }
+
+
    public static void main(String arrgs[]){
     printNumber(5); // Printing number from 5 to 1
     System.out.println();
     printNumber2(1); // Printing number from 1 to 5
+    System.out.println();
+    sum_Natural_Number(1, 10, 0);
+    int fact=1;
+    //factorial(5,fact);
+    int fact_num = factorial(5);
+    System.out.println(fact_num);
    } 
 }
+
