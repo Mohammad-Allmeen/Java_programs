@@ -50,28 +50,54 @@ public class Recursion {
      System.out.print(i+" "); // this will print all the i value as in the stack the memory created for every function called is removed till it reaches the initial value
     }
 
-    // public static void factorial(int n, int fact){
+    public static void factorial(int n, int fact){
         
-    //     if(n==0){
-    //         System.out.println("factorial is "+ fact);
-    //     }
-    //     else{
-    //         fact= fact*n;
-    //         factorial(n-1, fact);
-    //     }
-    // }
+        if(n==0){
+            System.out.println("factorial is "+ fact);
+        }
+        else{
+            fact= fact*n;
+            factorial(n-1, fact);
+        }
+    }
 
-    public static int factorial(int n){
+    public static int factorial_second_way(int n){
         
         if(n==0|| n==1){
             return 1;
         }
         
-       int fact_num= factorial(n-1);
-       int fact_n= n* fact_num;
+       int fact_num= factorial_second_way(n-1);
+       int fact_n=n* fact_num;
        return fact_n;
     }
 
+    public static void fibonacci(int n, int a, int b){
+        if(n==10){
+            return;
+        } else{
+            int c=a+b;
+            System.out.print(c+" ");
+            a=b;
+            b=c;
+            fibonacci(n+1, a, b);
+        }
+    }
+
+    // Recursion method to find x^n
+
+    public static int power(int x, int n){
+        if(n==0){
+            return 1;
+        }
+        if(x==0){
+        return 0;
+        }
+        int xpnm1= power(x, n-1);
+        int nPown= x*xpnm1;
+        return nPown;
+
+    }
 
    public static void main(String arrgs[]){
     printNumber(5); // Printing number from 5 to 1
@@ -80,9 +106,14 @@ public class Recursion {
     System.out.println();
     sum_Natural_Number(1, 10, 0);
     int fact=1;
-    //factorial(5,fact);
-    int fact_num = factorial(5);
+    factorial(5,fact);
+    
+    int fact_num = factorial_second_way(5);
     System.out.println(fact_num);
+     int a=0;
+     int b=1;
+     System.out.print(a+ " "+b+" ");
+    fibonacci(1, a,b);
    } 
 }
 
