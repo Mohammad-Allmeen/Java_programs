@@ -15,21 +15,24 @@ public class Repeating_element{
             int count =1; 
             for (int j = 0; j < arr.length; j++) {
                 if(j!=i && arr[i]==arr[j]){
+                 System.out.print(arr[i]+ " ");
                   count++;
+                  break;
                 }
               
             }
             if(count>1){
                 c++;
             }
-        
             visited.add(arr[i]);
         }     
         }
-        LinkedHashSet<Integer> check = new LinkedHashSet<>();
+
+        LinkedHashSet<Integer> check = new LinkedHashSet<>();// as it contains only unique elements
         for(int num:arr){
           check.add(num);
         }
+        System.out.println("Array after removing the duplicates: ");
         for (Integer integer : check) {
             System.out.print(integer+ ", ");
         }

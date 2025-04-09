@@ -21,7 +21,7 @@ public class Repeated_letters_words {
         int count=1;
         for (int j = 0; j <word.length(); j++) {
            for (int j2 = 0; j2 < word.length(); j2++) {
-            if(word.charAt(i)==word.charAt(j) && i!=j){
+            if(word.charAt(j)==word.charAt(j2) && j!=j2){
                 count++;
             }
            }
@@ -32,6 +32,7 @@ public class Repeated_letters_words {
          }
 
         }
+        
     }
     System.out.println(maxLetter_rep);
     }

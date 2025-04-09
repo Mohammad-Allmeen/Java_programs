@@ -7,17 +7,16 @@ public class Remove_duplicate {
 
   public static int [] duplicate(int arr[])
   {
-
- LinkedHashSet<Integer> set = new LinkedHashSet<>();
- for(int num: arr){
-  set.add(num);
- }
-  int index=0;
-  int arr1[] = new int[set.size()];
-  for (int i : set) {
-    arr1[index++]= i;
-  }
-  return arr1 ;
+    LinkedHashSet<Integer> set = new LinkedHashSet<>();
+    for(int num: arr){
+     set.add(num);
+    }
+     int index=0;
+     int arr1[] = new int[set.size()];
+     for (int i : set) {
+       arr1[index++]= i;
+     }
+     return arr1 ;
 }
 
 //Second Method by Brute force
@@ -26,7 +25,8 @@ public static int [] remove_duplicate(int arr[]){
 
     int len = arr.length;
     int temp[]= new int[len];
-     int count=0;
+    int count=0;
+
     for (int i = 0; i < len; i++) {
       boolean isDup = false;
       for (int j = 0; j <count; j++) {
@@ -113,7 +113,7 @@ return finalResult;
 
     //second method calling 
    int finalResult[]= remove_duplicate(arr);
-    System.out.println("The result of the second method is "+ Arrays.toString(finalResult) );
+    System.out.println("The result of removing duplicate element by the second method is "+ Arrays.toString(finalResult) );
 
    System.out.println();
     // method for removing the duplicate String
@@ -122,7 +122,7 @@ return finalResult;
 
     String strArr[]= str.split(" ");
     String result[]=duplicateString(strArr);
-    System.out.println("The result of removing duplicate in the String by using LinkedHashSet is : " + Arrays.toString(result));
+    System.out.println("The result of removing duplicate String by using LinkedHashSet is : " + Arrays.toString(result));
 
     System.out.println();
     String dupRemove[]= stringDuplicate(strArr);
