@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ZeroInEnd {
@@ -19,6 +21,26 @@ public class ZeroInEnd {
         }
         return arrans;
     }
+
+    // 
+
+    public static List<Integer> solvedbyArrayList(int arr[], int n){
+    ArrayList<Integer> newarr= new ArrayList<>();
+    int count=0;  
+    for(int i : arr){
+    if(i!=0){
+        newarr.add(i);
+    }
+    else{
+        count++;
+    }
+    }
+    for (int j = 0; j < count; j++) {
+        newarr.add(0);
+    }
+    return newarr;
+
+    }
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -30,5 +52,12 @@ public class ZeroInEnd {
         for (int i = 0; i < arrans.length; i++) {
             System.out.print(arrans[i]+" ");
         }
+
+        // Second method or approach, solved by ArrayList 
+
+       List<Integer> arrans2= solvedbyArrayList(arr, n);
+       for(int i: arrans2){
+        System.out.print(i+" ");
+       }
     }
 }
