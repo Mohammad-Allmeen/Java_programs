@@ -43,18 +43,21 @@ public class ZeroInEnd {
     }
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the length of the array");
         int n = sc.nextInt();
         int arr[]= new int[n];
+        System.out.println("Enter "+ n+ " number of elements in the array" );
         for (int i = 0; i < arr.length; i++) {
             arr[i]= sc.nextInt();
         }
         int arrans[]= zeroinEnd(arr, n);
+        System.out.println("The ouput by first method is ");
         for (int i = 0; i < arrans.length; i++) {
             System.out.print(arrans[i]+" ");
         }
 
         // Second method or approach, solved by ArrayList 
-
+      System.out.println("The output by solving the program using List: ");
        List<Integer> arrans2= solvedbyArrayList(arr, n);
        for(int i: arrans2){
         System.out.print(i+" ");
