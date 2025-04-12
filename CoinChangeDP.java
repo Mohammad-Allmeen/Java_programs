@@ -37,3 +37,41 @@ class Hide_Credit{
      string_approach(str);
     }
 }
+
+
+
+
+
+public class CoinChangeDP {
+
+    public static int minCoins(int[] coins, int total) {
+        int[] dp = new int[total + 1];
+
+        // Initialize dp array
+        for (int i = 1; i <= total; i++) {
+            dp[i] = Integer.MAX_VALUE;
+        }
+
+        dp[0] = 0; // Zero coins needed for amount 0
+
+        // Build up the dp table
+        for (int amount = 1; amount <= total; amount++) {
+            for (int coin : coins) {
+                if (amount - coin >= 0 && dp[amount - coin] != Integer.MAX_VALUE) {
+                    dp[amount] = Math.min(dp[amount], dp[amount - coin] + 1);
+                }
+            }
+        }
+
+        return dp[total] == Integer.MAX_VALUE ? -1 : dp[total];
+    }
+
+    public static void main(String[] args) {
+        int[] coins = {1, 2, 5};
+        int total = 11;
+
+        int result = minCoins(coins, total);
+
+        System.out.println(result);
+    }
+}
