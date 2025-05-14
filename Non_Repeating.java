@@ -9,7 +9,8 @@ public class Non_Repeating {
 
      for(int i =0; i<str.length();i++){
 
-      for (int j = 0; j < str.length(); j++) {
+      for (int j = 0; j < str.length(); j++)
+      {
         count =0;
         if(str.charAt(i)==str.charAt(j)&& i!=j){
             count=1;

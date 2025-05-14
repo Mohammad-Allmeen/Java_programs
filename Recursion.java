@@ -99,7 +99,66 @@ public class Recursion {
 
     }
 
-   public static void main(String arrgs[]){
+    // Recursive method to print the reverse of a string
+
+    public static void reverse_string(String str, int ind){
+    if(ind==0){
+        System.out.println(str.charAt(ind));
+        return;
+    }
+
+    System.out.print(str.charAt(ind));
+    reverse_string(str, ind-1);
+    }
+
+    // Recursive method to find the first and last occurence of an element in a string
+
+    public static int first = -1; // taken static so that at every recursion the new variable is not created as in recusrion if the variable is not-static at every recursive call in the memory the variable is intialized
+    public static int last = -1;
+
+    public static void elementOccurence(String str, int idx, char element){
+     
+   
+    if(idx==str.length()){
+        System.out.println("First Occurence is "+ first+ " and Last Occurence is "+ last);
+        return;
+    }
+
+    char currChar= str.charAt(idx);
+     if(currChar==element){
+        if(first==-1){
+            first=idx;
+        }
+        else{
+         last=idx;
+        }
+     }
+
+     elementOccurence(str, idx+1, element);
+    }
+
+    
+    // Recursive method to check if the array is sorted 
+
+    public static boolean checkSorted(int arr[], int len){
+
+        if (len==0){
+            System.out.println("The array is sorted");
+            return true;
+        }
+        if(arr[len]>=arr[len-1]){
+            checkSorted(arr, len-1);
+        }else{
+            System.out.println("The array is not sorted");
+            return false;
+        }
+        return false; 
+    }
+
+    
+
+
+   public static void main(String args[]){
     printNumber(5); // Printing number from 5 to 1
     System.out.println();
     printNumber2(1); // Printing number from 1 to 5
@@ -110,10 +169,30 @@ public class Recursion {
     
     int fact_num = factorial_second_way(5);
     System.out.println(fact_num);
-     int a=0;
-     int b=1;
-     System.out.print(a+ " "+b+" ");
+    int a=0;
+    int b=1;
+    System.out.print(a+ " "+b+" ");
     fibonacci(1, a,b);
-   } 
+
+
+        // Recursive method to print the reverse of a string
+
+    String str= "abcd";
+    reverse_string(str, str.length()-1);
+
+
+    // Recursive method to find the first and last occurence of an element in a string
+
+    String str2="aabbccdsfadsa";
+    elementOccurence(str2, 0, 'a');
+
+    // Recursive method to check if the array is sorted 
+
+    int array[]={1,2,3,4,5};
+    
+    checkSorted(array, 4);
+
+
+   }
 }
 
