@@ -57,7 +57,7 @@ public class Recursion_2 {
                     char currChar= str.charAt(idx);
 
                     // to be, meaning including the character 
-                    subsequence(str, idx+1, newStr+currChar);
+                   subsequence(str, idx+1, newStr+currChar);
 
                    // not to be, meaning excluding the character 
                    subsequence(str, idx+1, newStr);
@@ -77,13 +77,27 @@ public class Recursion_2 {
                     }
                 }
 
-
                 char currChar= str.charAt(idx);
                 unique_subsequence(str, idx+1, newStr+currChar, set);
                 unique_subsequence(str, idx+1, newStr, set);
             }
 
+       
+            public static String keypad[]= {".", "abc", "def", "ghi", "jkl" , "mno", "pqrs", "tu", "vwx","yz"};
 
+            public static void keypadCombi(String str, int idx, String combination){
+            
+                if(idx==str.length()){
+                    System.out.println(combination);
+                    return;
+                }
+            char currChar = str.charAt(idx);
+            String mapping = keypad[currChar-'0'];
+
+            for (int i = 0; i < mapping.length(); i++) {
+                keypadCombi(str, idx+1, combination+mapping.charAt(i));
+            }
+            }
 
     public static void main(String[] args){
 
@@ -97,12 +111,17 @@ public class Recursion_2 {
 
     // Recursive method to find out the subsequences of the string
 
-    subsequence("abc", 0, "");
+    subsequence("abc", 0, "");   // time complexity = O(2^n) where n = total number of character, 2 because for recusion 2 branches are created  
 
     // Recursive method to find the unique subsequence of the string using HashSet as it only stores unique values
     
     HashSet<String> set= new HashSet<>();
     unique_subsequence("aaa", 0, "", set);
+
+    
+    // Recursive method to find the keypad combination 
+       keypadCombi("23", 0, "");
+
 
     }
 }
