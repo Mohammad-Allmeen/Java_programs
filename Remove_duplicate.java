@@ -116,6 +116,7 @@ return finalResult;
     System.out.println("The result of removing duplicate element by the second method is "+ Arrays.toString(finalResult) );
 
    System.out.println();
+
     // method for removing the duplicate String
 
     String str="today is a fabulous day today";
