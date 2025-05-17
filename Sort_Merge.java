@@ -1,6 +1,9 @@
+//time complexity of dividing the array is = log(n) and of the conquering is O(n) which is linear time
+// therefore the time complexity of merge sort is-     O(n logn)
+
 import java.util.Scanner;
 
-public class mergeSort {
+public class Sort_Merge {
 
     public static void conquer(int arr[], int si, int mid, int ei){
 
@@ -10,8 +13,7 @@ public class mergeSort {
     int idx2=mid+1;
     int x=0; // to track the index of merged array
 
-    while (idx1<=mid && idx2<=
-    ei) {
+    while (idx1<=mid && idx2<=ei) {
        if(arr[idx1]<=arr[idx2]){  // comparing between the divided elements
         merged[x++]= arr[idx1++];
        }else{
@@ -46,7 +48,7 @@ public class mergeSort {
     public static void main(String[] args){
  int arr[]= {5,3,2,4,8,9,0,1};
 
-divide(arr, 0, 7);
+  divide(arr, 0, 7);
 
 for (int i = 0; i < arr.length; i++) {
     System.out.print(arr[i]+" ");
