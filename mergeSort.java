@@ -10,7 +10,8 @@ public class mergeSort {
     int idx2=mid+1;
     int x=0; // to track the index of merged array
 
-    while (idx1<=mid && idx2<=ei) {
+    while (idx1<=mid && idx2<=
+    ei) {
        if(arr[idx1]<=arr[idx2]){  // comparing between the divided elements
         merged[x++]= arr[idx1++];
        }else{
