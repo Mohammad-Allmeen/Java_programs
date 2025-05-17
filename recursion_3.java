@@ -52,6 +52,20 @@ public static int placeTiles(int n, int m){
 
     return vertically+horizontally;
 } 
+
+// Recursive code to find total ways to call people in the party either individualy of in pairs
+
+public static int callguests(int n){
+    if(n<=1){
+        return 1;
+    }
+
+    int ways1= callguests(n-1);
+
+    int ways2= (n-1) * callguests(n-2);
+
+    return ways1+ways2;
+}
     public static void main(String[] args){
 
 // Recursive code to find permutation 
@@ -67,6 +81,10 @@ System.out.println(totalPath);
 
 System.out.println("The number of ways to place the tiles is "+ placeTiles(4,3)); // when n==4, the ans is 2 and if n<m then ans is 1
 
+
+// Recursive code to find total ways to call people in the party either individualy of in pairs
+
+System.out.println("The number of ways to call the guests are: "+ callguests(4));
 
     }
 }
