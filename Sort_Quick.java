@@ -1,11 +1,15 @@
-/*Pivot element is selected in Quick sort
+/*
+Quick sort algo works on the principle of divide and conquer algorithm
+Pivot element is selected in Quick sort
+
+Then all the elements smaller then pivot is arranged on the left side and the larger on is arranged on the right
 The pivot element can be selected in four ways 
 1. Random element
 2. Median of the array 
 3. First element
 4. Last Element
 
-Initially the pivot element is take as -1 as there is no element currently which is smaller than pivot
+Initially the pivot element is taken as -1 as there is no element currently which is smaller than pivot
 Basically at every level we are fincding the exact position of the pivot element
 
 Worst case of time complexity is when the pivot element is the largest or the smallest value
@@ -15,7 +19,7 @@ time complexity is
 Worst Case- O(n^2)
 Average Case- O(n logn)
 
-However is the majority cases quick sort is preferred as you are not making extra array to store the array
+However is the majority cases quick sort is preferred as you are not making extra array like in merge sort to store the array
 
 */
 

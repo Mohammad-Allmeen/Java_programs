@@ -5,6 +5,16 @@
 // Abstract class can contain abstract and non abstract method but the abstract method will be only present inside the abstract class
 // abstract can have public, private or protected access specifier
 
+
+/* 
+Uses of static-
+
+1. Static belongs to the class, and the static variable or method are called using class name whereas non-static which belongs to the method and are called using object
+2. For static only ones the memory is created and provided to it, unlike for non-static where for every object a new memory is given. Therefore to static save the memeory usage
+3. Basically you create static for which you want something common throughout the program like for Students data the School will be common
+ * 
+ */
+
 abstract class Car{
     public abstract void drive();
 

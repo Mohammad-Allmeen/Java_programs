@@ -1,7 +1,7 @@
 // Time complexity of this code will come as - 
 /*
  * T(n) = 2ⁿ − 1
- * Time Complexity: Big O(2ⁿ)
+ * Time Complexity: Big O(2^n)
 
 Why O(2ⁿ)? Let's break it down
 
@@ -32,10 +32,3 @@ public class Tower_of_Hanoi {
     }
 }
 
-Maine apne walidein ko ab details aur picture dekha diye h unhe thoda decision lene ke liye thoda waqt chahiye. May 
-Allah swt guide them.
-
-Please make dua for me, in my family only i and my sister are the follower of Salaf, my mother and father have now started following may Allah swt guide
-as you know its a slow process to remove all the unislamic things and mindset that people were following since ages. May Allah swt help I am trying my best 
-to make them understand about blessing of early and according to Islam what are the things to look the main quality that is required to see when choosing a spouse is the deen and aqidah of 
-him/her. May Allah swt help me and make things ease for me, kindly mere liye aap dua kariyega
