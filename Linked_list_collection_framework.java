@@ -21,6 +21,7 @@ System.out.println(list.size());
 
 list.removeFirst();
 list.removeLast();
+list.remove(2); // Inbuild function to remove the element at a particlar position 
 
 for (String i: list) {
     System.out.print(i+"->");
@@ -34,6 +35,6 @@ for (int i = 0; i < list.size(); i++) {
 
 }
 System.out.println();
-System.out.println("Size: "+ list.size());
+System.out.println("Sizeof linked list: "+ list.size());
     }
 }
