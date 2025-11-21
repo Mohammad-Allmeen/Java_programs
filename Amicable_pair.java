@@ -1,5 +1,6 @@
 /*
- * The amicable numbers are two different numbers (a pair of numbers) so related that the sum of the proper divisors (excluding the number itself) of one of the numbers is equal to the other. A proper divisor of a number is a divisor other than the number itself. It is also known as friendly numbers.
+ * The amicable numbers are two different numbers (a pair of numbers) so related that the sum of the proper divisors (excluding the number itself) of one of the numbers is equal to the other.
+ *  A proper divisor of a number is a divisor other than the number itself. It is also known as friendly numbers.
 
 The sum of the divisor of the first number = The sum of the divisor of the second number
 The sum of the divisor of the second number = The sum of the divisor of the first number

@@ -9,12 +9,12 @@
  * 1. GET BIT OPERATION-
  * For this process we create a bit mask- 
  * for example the Number is (0101) thereafterr you will take 1(0001) and shift it to particular position given in the question for example 2
- * so 1<<2(1lest shift by 2-> 0100) this 0100 is called Bit Mask and  thereafter we perform AND operation with this and the given Number
+ * so 1<<2(1 left shift by 2-> 0100) this 0100 is called Bit Mask and thereafter we perform AND operation with this and the given Number
  * AND Opearation between 0101 and 0100 will provide the ans as 0100 
  * Now if the answer is non-zero(0100) therefore the bit that we want to get is 1 but if the AND operation results in zero(0000) then
  * the bit that we want to get is 0
  * 
- * NOTE- the logic behid this is as you know the AND operation results only to one when both the numbers are 1
+ * NOTE- the logic behind this is as you know the AND operation results only to one when both the numbers are 1
  * if in that partuclar position meaning third place(0101) if the number is 1 then the AND operation 
  * between 0101 and 0100 will result in one otherwise all will be zero
  */ 
@@ -35,7 +35,7 @@ public class Bit_manipulation {
        // To know about the second position
        bitmask= 1<<1; //0010
 
-        if((n&bitmask)==0){ // 0101(5) AND 0010(bitmas) the result is 0000 therefore the bit will zero
+        if((n&bitmask)==0){ // 0101(5) AND 0010(bitmask) the result is 0000 therefore the bit will zero
             System.out.println("The Bit at second position is zero");
         } else{
             System.out.println("The Bit at second position is one");
