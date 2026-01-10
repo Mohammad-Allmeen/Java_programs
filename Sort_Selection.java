@@ -21,6 +21,7 @@ public class Sort_Selection {
             System.out.print(arr[i] + " ");
         }
      //Sorting with Arrays.sort function and using different loop
+     
      System.out.println("Sorting with Arrays sort function and using different loop");
         Arrays.sort(arr2);
         for(int num : arr2){

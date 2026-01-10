@@ -11,11 +11,11 @@ In Array you can store primitive datatype
 
 In ArrayList everything is stored in the form of object and its stored in the heap memory
 
-In Array List, the time complexity of searching is Big O(1), as arr[7], i.e in one operation we found the element which is the efficient way
+In Array List, the time complexity of searching operation is Big O(1), as arr[7], i.e in one operation we found the element which is the efficient way
 
 However for the insert operation the time complexity will become Big O(n), as we need to shift every element which is time taking and not the efiecient way hence here comes the use of Linked List
 
-As in Linked List we insert the element just by changing/poitning the links of the address, there is no shifting of the elements therefore it is more efficient 
+As in Linked List we insert the element just by changing/pointing the links of the address, there is no shifting of the elements therefore it is more efficient 
  
 In Conclusion:-
 

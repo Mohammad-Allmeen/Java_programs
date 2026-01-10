@@ -40,7 +40,7 @@ public class Sort_Merge {
         if(si>=ei){
          return;
         }
-    int mid= si+ (ei-si)/2;   // calculating mid like this to avoid the memory overflow and spac complexity comstraint
+    int mid= si+ (ei-si)/2;   // calculating mid like this to avoid the memory overflow and space complexity comstraint
     divide(arr, si, mid);
     divide(arr, mid+1, ei);
     conquer(arr, si, mid, ei); 

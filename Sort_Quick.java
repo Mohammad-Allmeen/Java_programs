@@ -19,7 +19,7 @@ time complexity is
 Worst Case- O(n^2)
 Average Case- O(n logn)
 
-However is the majority cases quick sort is preferred as you are not making extra array like in merge sort to store the array
+However in the majority cases quick sort is preferred as you are not making extra array like in merge sort to store the array
 
 */
 
