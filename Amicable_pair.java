@@ -18,11 +18,49 @@ The sum of divisor of 284 is = 220
  */
 
 
-import java.util.Scanner;
+
+
+
+import java.util.*;
 
 public class Amicable_pair {
+
+    public static boolean amicablePair(int n1, int n2){
+     
+        int sumDivisor1=0,sumDivisor2=0;
+        for (int i = 1; i <=n1/2; i++) {
+            if(n1%i==0){
+             sumDivisor1+=i;
+            }
+        }
+
+         for (int i = 1; i <=n2/2; i++) {
+            if(n2%i==0){
+             sumDivisor2+=i;
+            }
+        }
+
+        if(sumDivisor1==sumDivisor2){
+       System.out.println("Yes they both are Amicable pair");
+     return true;    
+    }
+
+    System.out.println("No its not the Amicable pair");
+    return false;
+
+    }
     public static void main(String[]args){
-        Scanner sc = new Scanner(System.in);
+    System.out.println(amicablePair(220,284));
+
+    }
+}
+
+
+
+
+
+/*
+  Scanner sc = new Scanner(System.in);
         System.out.println("Enter the first and Second number");
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
@@ -43,4 +81,4 @@ public class Amicable_pair {
         System.out.println("No they are not");
     }
     }
-}
+*/

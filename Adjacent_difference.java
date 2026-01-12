@@ -12,7 +12,7 @@ Example
 Input
 input 1 : 7
 input 2 : 11 22 12 24 13 26 14
-input 3 : 5
+input 3 : 52
 
 Output
 25
