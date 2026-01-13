@@ -31,43 +31,6 @@ public class Ap_Gp {
 
       series_AP();
       series_GP();
-
-
-
     }
 }
 
-
-/*
- // Print AP series
-        int n1 = 2;
-        int d = 3;
-        System.out.println("The AP series is ");
-        for (int i = 1; i <= 5; i++) {
-            System.out.print(n1 + " ");
-            n1 = n1 + d;
-        }
-
-        // Printing GP series
-        System.out.print("The GP series is ");
-        for (int i = 1; i <= 5; i++) {
-            System.out.print(n1 + " ");
-            n1 = n1 * d;
-        }
-
-        System.out.println();
-
-        // Sum of the GP series
-        int a = 3;
-        int r = 5;
-        int n = 4;
-        int sum = 0;
-        for (int i = 1; i <= n; i++) {
-            sum = sum + a;
-            a = a * r;
-            // a= (int) Math.pow(2, 2);
-        }
-        System.out.println("The sum of GP series is: "+sum);
-
-        sum_AP();
-*/
