@@ -34,11 +34,11 @@ public class ReverseDigit {
     public static void main(String[] args) {
         int number = 12345;
 
-        //Brute force approach 
+        //1st Approach by Brute force approach 
         System.out.println(reverseNumberBruteForce(number));
 
 
-        // 2nd by parsing to String reversing and then to Int
+        // 2nd Approach by parsing to String reversing and then to Int
 
         System.out.println(reverseParsingMethod(number));
 

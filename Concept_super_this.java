@@ -16,8 +16,7 @@ class A extends Object //Every class in JAVA extends Object class, it is automat
     }
 }
 
-
-     class B extends A{
+class B extends A{
         
  public B(){
     super(); 
