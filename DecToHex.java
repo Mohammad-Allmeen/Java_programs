@@ -12,7 +12,7 @@ public class DecToHex {
           ch='B';
           break;
           case 12:
-          return 'C'; //we can use return also 
+          return 'C';  //we can use return also 
           case 13:
           ch='D';
           break;
@@ -42,7 +42,8 @@ public class DecToHex {
         }
         return hex.reverse().toString();
     }
-     public static void main(String [] args){
+     public static void main(String [] args)
+     {
         Scanner sc = new Scanner(System.in);
         int dec= sc.nextInt();
         System.out.println("The Hexadecimal value is "+ decToHex(dec));
