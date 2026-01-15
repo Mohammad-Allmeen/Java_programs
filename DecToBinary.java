@@ -17,6 +17,11 @@ public class DecToBinary {
         int number = scanner.nextInt();
         String binaryRepresentation = findBinary(number);
         System.out.println("The binary representation of " + number + " is: " + binaryRepresentation);
+
+
+
+
+
     }
 }
 
@@ -28,17 +33,3 @@ public class DecToBinary {
 
 
 
-/*
- *     // Special case for 0
-     if(number==0){
-     return "";
-    }
-    StringBuilder result = new StringBuilder();
-    while(number>0){
-        int rem= number%2;
-        result.append(rem);
-        number/=2;
-
-    }
-    return result.reverse().toString();
- */

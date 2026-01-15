@@ -27,7 +27,7 @@ public class MagicNumber {
     System.out.println("Enter the value of N");
     Scanner sc = new Scanner(System.in);
     int n= sc.nextInt();
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i <=n; i++) {
         if(magicNumber(i)){
             System.out.println(i);
         }

@@ -3,14 +3,32 @@ import java.util.Arrays;
 class Max_product_pair{
     public static void main(String[] args){
         int arr[] = {1, 20, -10, -30, 50, 2, 60,3};
-        Arrays.sort(arr);
-        int len= arr.length;
-        System.out.println(len);
-        int last= arr[len-1];
-        int secLst= arr[len-2];
+        int n=arr.length;
+        for(int i=0;i<n-1;i++){
+            for(int j=0;j<n-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                int temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+            }
+        }
+        int secLast= arr[n-2];
+        int last= arr[n-1];
+        System.out.println(last*secLast);
 
-        System.out.println(last*secLst);
 
+        //direct sort method approach 
+        
+        // Arrays.sort(arr);
+        // int len= arr.length;
+        // System.out.println(len);
+        // int last= arr[len-1];
+        // int secLst= arr[len-2];
+
+        // System.out.println(last*secLst);
+
+       
 
         //second method to find pair that maximum product of an array
 
@@ -41,3 +59,5 @@ class Max_product_pair{
 
     }
 }
+
+ 

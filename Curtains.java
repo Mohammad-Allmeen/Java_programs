@@ -34,7 +34,7 @@ public class Curtains {
         int max=0;
         for(int i=0;i<arr.length;i++){
             if(arr[i]>2000){
-                max=max+ (int) (20*arr[i])/100;
+                max=max+ (20*arr[i])/100;
             }
         }
         System.out.println("The interest is "+max);
@@ -43,7 +43,7 @@ public class Curtains {
     
 public static void main(String[] args){
     int count=0;
-    int arr[]= {3,42,6,60, 14, 12};
+    int arr[]= {3,42,6,60,14, 12};
     for(int i=0; i<6; i++){
         if(arr[i]>=12){
             int rem= arr[i]/12;
