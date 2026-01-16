@@ -1,3 +1,39 @@
+public class DecToAllAndViceVersa {
+    public static void main(String[] args) {
+        
+        // Decimal to Binary, Octal and Hexadecimal
+
+        int dec= 250;
+        
+        String decToBin= Integer.toBinaryString(dec);
+        System.out.println("Dec to Binary- "+decToBin );
+
+        String decToOct= Integer.toOctalString(dec);
+        System.out.println("Dec to Octal- "+ decToOct);
+        
+        String decToHex= Integer.toHexString(dec);
+        System.out.println("Dec to Hex- "+decToHex);
+
+
+        //  Binary, Octal and Hexadecimal to Decimal
+        
+        System.out.println("Binary to Decimal- "+ Integer.parseInt(decToBin,2));
+
+        System.out.println("Binary to Octal- "+ Integer.parseInt(decToOct,8));
+
+        System.out.println("Binary to Hex.- "+ Integer.parseInt(decToHex,16));
+    }
+}
+
+
+
+
+
+
+
+
+
+
 /*
 1. Decimal → Binary / Octal / Hexadecimal
 1.1 Integer.toBinaryString(int)
@@ -93,29 +129,3 @@ String hex = Integer.toHexString(decimal);
 System.out.println(hex); // 19
  */
 
-public class DecToAllAndViceVersa {
-    public static void main(String[] args) {
-        
-        // Decimal to Binary, Octal and Hexadecimal
-
-        int dec= 250;
-        
-        String decToBin= Integer.toBinaryString(dec);
-        System.out.println("Dec to Binary- "+decToBin );
-
-        String decToOct= Integer.toOctalString(dec);
-        System.out.println("Dec to Octal- "+ decToOct);
-        
-        String decToHex= Integer.toHexString(dec);
-        System.out.println("Dec to Hex- "+decToHex);
-
-
-        //  Binary, Octal and Hexadecimal to Decimal
-        
-        System.out.println("Binary to Decimal- "+ Integer.parseInt(decToBin,2));
-
-        System.out.println("Binary to Octal- "+ Integer.parseInt(decToOct,8));
-
-        System.out.println("Binary to Hex.- "+ Integer.parseInt(decToHex,16));
-    }
-}

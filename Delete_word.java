@@ -3,16 +3,20 @@ import java.util.Scanner;
 public class Delete_word 
 {
 public static String delete_word(String sentence, String delWord){
-    StringBuilder newSet = new StringBuilder();
-    String nSent= "";
+   if(sentence.isBlank()){
+    System.out.println("Error!Enter the sentence");
+   }
+   
+    StringBuilder str= new StringBuilder();
     String arr[]= sentence.split(" ");
     for (int i = 0; i < arr.length; i++) {
         if(!arr[i].equals(delWord)){
-         nSent = nSent+ arr[i]+" ";
-         newSet= newSet.append(arr[i]).append(" ");
+            str= str.append(arr[i]).append(" ");
         }
     }
-    return newSet.toString();
+     String s= str.toString();
+        s.trim();
+        return s;
 }
     
     public static void main(String[] args){
@@ -21,7 +25,9 @@ public static String delete_word(String sentence, String delWord){
         String sentence = sc.nextLine();
         System.out.println("Enter the word to delete");
         String delete_word = sc.nextLine();
-        delete_word(sentence, delete_word);
+        System.out.println(delete_word(sentence, delete_word));
+
         
     }
 }
+
