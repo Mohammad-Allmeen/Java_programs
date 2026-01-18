@@ -8,6 +8,13 @@ public class LastWord_length {
             count++;
 
         }
+        // 2nd approach to find the length of last word
+
+        String arr[]= s.split(" ");
+        String lastWord= arr[arr.length-1];
+        int len= lastWord.length();
+
+        // return len;
         return count;
     }
     public static void main(String [] args){

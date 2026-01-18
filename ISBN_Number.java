@@ -5,13 +5,13 @@ public class ISBN_Number {
         String str = Long.toString(n);
         int dig[] = new int[str.length()];
         for(int i =0;i<str.length();i++){
-            dig[i]= Character.getNumericValue(str.charAt(i));
+            dig[i]= Character.getNumericValue(str.charAt(i)); //converts a numeric character like '9' into the integer 9.
     }
         int sum=0;
         int j=1;
-        for(int i=dig.length;i>0;i--)
+        for(int i=dig.length-1;i>=0;i--)
         {
-         sum+= j*dig[i-1];
+         sum+= j*dig[i];
          j++;
         }
         if(sum%11==0){

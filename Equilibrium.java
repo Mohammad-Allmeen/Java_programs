@@ -14,10 +14,11 @@ The sum of the numbers after index 2 is: 0
 
 public class Equilibrium {
     public static int find(int arr1[]){
+     
         for (int i = 0; i < arr1.length; i++) {
-            int sum1=0,sum2=0;
-            for (int j = 0; j<i; j++) {
-                sum1=sum1+ arr1[j];
+            int sum1=0, sum2=0;
+            for (int j = 0; j < i; j++) {
+                sum1+=arr1[j];
             }
             for (int j = i+1; j < arr1.length; j++) {
                 sum2+=arr1[j];

@@ -13,6 +13,19 @@ Explanation: 3+7+9=19. 379 is not divisible by 19. Therefore 379 is a harshad nu
 */
 
 public class Harshad {
-    
+    public static void main(String[] args) {
+        int n=387;
+         int sum=0;
+         int temp=n;
+        while(n!=0){
+            int rem= n%10;
+            sum+=rem;
+            n/=10;
+        }
+
+        if(temp%sum==0){
+            System.out.println("Harshad number");
+        }
+    }
 
 }
