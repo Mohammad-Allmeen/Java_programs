@@ -3,6 +3,39 @@ import java.util.Scanner;
 public class Tech_number {
     public static boolean is_check(int n){
         int count=0;
+        int dig=n;
+        while(n>0){
+            n/=10;
+            count++;
+        }
+        int first_half=0, second_Half=0, total=0;
+
+        if(count%2==0)
+        {
+        first_half= dig % (int)Math.pow(10, count/2);
+        second_Half= dig / (int)Math.pow(10, count/2);
+        total =(first_half+second_Half)*(first_half+second_Half);
+        }
+        if(total==dig){
+            return true;
+        }
+
+        return false;
+    }
+    public static void main(String [] args){
+    //    Scanner sc = new Scanner(System.in);
+    //     int n = sc.nextInt();
+        for (int i = 1; i < 100000; i++) {
+       if (is_check(i)){
+        System.out.println( i+" is Technical number");
+       }
+   }
+}
+    }
+
+
+    /*
+      int count=0;
         int first_half=0, second_half=0;
         int dig=n;
         int total=0;
@@ -10,6 +43,7 @@ public class Tech_number {
         count++;
         n=n/10;
     }
+  
     if(count%2==0){
         int pow= count/2;
         second_half= dig% (int)(Math.pow(10, pow));//(int) because Math.pow return double datatype
@@ -21,15 +55,4 @@ public class Tech_number {
     }
 
     return false;
-    }
-    public static void main(String [] args){
-       // Scanner sc = new Scanner(System.in);
-        //int n = sc.nextInt();
-        for (int i = 1; i < 100000; i++) {
-       if (is_check(i)){
-        System.out.println(i+ " is Technical number");
-       }
-       
-    }}
-    }
-
+    */

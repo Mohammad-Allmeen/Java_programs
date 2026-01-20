@@ -13,7 +13,7 @@ public class IntegerToArray {
         int input=count;
         while (n1!=0) {
             int rem= n1%10;
-            arr[input-1]= rem;
+            arr[n-1]= rem;
             input--;
             n1/=10;
 

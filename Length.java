@@ -14,7 +14,7 @@ public class Length {
         System.out.println(index);
         System.out.println(s.length());
         System.out.println(arr.length);
-        System.out.println(s.substring(1, 6));
+        System.out.println(s.substring(1, 6)); // it excludes the end index
 
         int a = 12, b = 25;
         int bitiseAND= a&b;

@@ -22,9 +22,6 @@ public class Supercoder {
     }
     String fin= ans+sec;
     System.out.println(fin);
-    
-
-
    } 
 }
 
