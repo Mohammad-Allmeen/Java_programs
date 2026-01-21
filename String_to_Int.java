@@ -24,7 +24,7 @@ public class String_to_Int {
         System.out.println(a1.compareTo(a2)); //5 as ascii value of H is 72 and of C is 67 so 72-67=5
 
         // What if you use == this wil return similar and work for the primitive datatype but if the value are store in the non-primitive datatype and value are same 
-        // then it will return not equal no matter if the value or string are equal because the non-primitive datatype qare stored in different location that is in the heap memory 
+        // then it will return not equal no matter if the value or string are equal because the non-primitive datatype are stored in different location that is in the heap memory 
 
         //EXAMPLE
 

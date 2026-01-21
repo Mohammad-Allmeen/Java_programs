@@ -32,6 +32,6 @@ public class String_Builder {
 
         int a=8;
         System.out.println(a>>1);// binary right shift will be 4
-        System.out.println(a<<1); // Binary left shif will be 16
+        System.out.println(a<<1); // Binary left shift will be 16
     }
 }

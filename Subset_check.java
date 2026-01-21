@@ -32,13 +32,13 @@ public class Subset_check {
     public static void main(String [] args){
         
     int arr1[]={1,3,4,5,2};
-	int arr2[]={2,4,3,1,7,5,15};
+	int arr2[]={0,4,3,1,7,5,15};
    
     boolean check =subset(arr1, arr2);
     if(check){
         System.out.println("Yes");
     }else{
-        System.out.println("No it not");
+        System.out.println("No, it's not");
     }
     }
 }
