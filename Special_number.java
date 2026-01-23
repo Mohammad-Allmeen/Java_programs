@@ -7,26 +7,23 @@ public class Special_number {
         this.number = number_obj;
     
    // public void check_special(int number){
-        int sum=0;
-        int compare=number;
-        while(number !=0 )
-        {
-         int fact=1;
-         int digit = number%10;
-         for(int i=1;i<=digit;i++){
-          fact = fact *i;
-         }
-         sum = sum+fact;
-         number = number/10;
+      
+      int sum=0;
+     int check = number;
+      while(number>0){
+        int rem=number%10;
+        int fact=1;
+        for (int i = 1; i <=rem; i++) {
+            fact*=i;
         }
-        if(sum==compare)
-        {
-            System.out.println("Yes it is a special number ");
-        }
-        else
-        {
-            System.out.println("not a special number");
-        }
+        sum+=fact;
+        number/=10;
+      }
+      if(sum==check){
+        System.out.println("Special number");
+      }else{
+        System.out.println("Not a Special Number");
+      }
     }
    
     public static void main(String[] args){

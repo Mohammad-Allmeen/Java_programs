@@ -32,18 +32,3 @@ if(is_SpyCheck(number))
 
 
 
-
-/*
-       int sum=0, pro=1, last;
-    while(n!=0){
-            last=n%10;
-            sum+=last;
-            pro*=last;
-            n/=10;
-        }
-        if(sum==pro){
-            return true;
-        }
-    return false;
-        
-*/

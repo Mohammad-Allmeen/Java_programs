@@ -6,7 +6,44 @@ import java.util.LinkedHashSet;
 public class Repeating_element{
 
     public static int count(int arr[]){
-        int c=0;
+        int count=0;
+        HashSet<Integer> visited = new HashSet<>();
+        for (int i = 0; i < arr.length; i++) {
+            if(!visited.contains(arr[i])){
+              for (int j = 0; j < arr.length; j++) {
+                if(i!=j && arr[i]==arr[j]){
+                    visited.add(arr[i]);
+                    System.out.println(arr[i]);
+                    count++;
+                    break;
+                }
+              } 
+            }
+        }
+
+        LinkedHashSet<Integer> check = new LinkedHashSet<>();
+        for(int i:arr){
+            check.add(i);
+        }
+        System.out.println("Array after removing duplicates");
+          for(int i:check){
+            System.out.print(i+", ");
+        }
+        System.out.println();
+    return count;
+    }
+
+
+public static void main(String[] args){
+int arr[]= {5,4,5,6,7,6,9,0,7};
+int n = count(arr);
+System.out.println("Number of repeating Character is: "+ n);
+}
+}
+
+/*
+
+     int c=0;
 
         HashSet<Integer> visited= new HashSet<>();
         for (int i = 0; i < arr.length; i++) {
@@ -37,12 +74,4 @@ public class Repeating_element{
             System.out.print(integer+ ", ");
         }
         return c;
-    }
-
-
-public static void main(String[] args){
-int arr[]= {5,4,5,6,7,6,9,0};
-int n = count(arr);
-System.out.println("Number of repeating Character is: "+ n);
-}
-}
+*/
