@@ -13,7 +13,7 @@ Recursion are used in various fields for example
 In Recursion every time the function is called a new memory is created for every varibale present inside the function
 This is the reason recursion used a lot of memory.
 This is the Reason if the base case is not written and recursion is called infinite times the memory gets full and it
-creates the situation of Statck Overflow
+creates the situation of Stack Overflow
 
 */
 

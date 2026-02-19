@@ -23,29 +23,28 @@ public class Remove_duplicate {
 
 public static int [] remove_duplicate(int arr[]){
 
-    int len = arr.length;
-    int temp[]= new int[len];
-    int count=0;
-
-    for (int i = 0; i < len; i++) {
-      boolean isDup = false;
-      for (int j = 0; j <count; j++) {
-        if(arr[i]==arr[j] && i!=j){
-            isDup=true;
-            break;
-        }
-      }
-      if(!isDup){
-        temp[count]= arr[i];
-        count++;
-      }  
+  int count=0;
+  int temp[]= new int[arr.length];
+  for(int i=0; i<arr.length;i++){
+    boolean isDup= false;
+   for(int j=0; j<count;j++){
+    if(arr[i]==arr[j]&& i!=j){
+     isDup=true;
+     break;
     }
+   }
+   if(!isDup){
+    temp[count]=arr[i];
+    count++;
+   }
+  }
 
-    int finalResult[] = new int[count];
-    for (int i = 0; i < count; i++) {
-        finalResult[i]= temp[i];
-    }
-    return finalResult;
+  int arrAns[]= new int[count];
+for(int i=0;i<count;i++){
+arrAns[i]= temp[i];
+}
+
+return arrAns;
 }
 
 //Method for removing duplicate in the String by LinkedHashSet
@@ -62,8 +61,7 @@ public static String [] duplicateString(String arr[])
   String result[] = new String[set.size()];
   int count=0;
   for(String str: set){
-   result[count]= str;
-   count++;
+   result[count++]= str;
   }
   return result;
   }
@@ -102,7 +100,7 @@ return finalResult;
 
   public static void main(String[] args) {
     int n = 9;
-    int arr[] = { 4, 3, 9, 2, 4, 1, 10, 89, 34 };
+    int arr[] = { 4, 3,1, 9, 2, 4, 1, 10, 89, 34 };
 
     int arrAns[]= duplicate(arr);
 
@@ -110,10 +108,10 @@ return finalResult;
         System.out.print(arrAns[i]+" ");
     }
 
-
+System.out.println();
     //second method calling 
    int finalResult[]= remove_duplicate(arr);
-    System.out.println("The result of removing duplicate element by the second method is "+ Arrays.toString(finalResult) );
+   System.out.println("The result of removing duplicate element by the second method is "+ Arrays.toString(finalResult) );
 
    System.out.println();
 
@@ -133,11 +131,3 @@ return finalResult;
 
   }
 }
-
-
-
-
-
-
-
-

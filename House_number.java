@@ -1,6 +1,7 @@
 /*
 
 Hs = (s + 1)3 + Lk=1 k * k, where s >= 0
+
 Thus, we get
 Ho = (0 + 1)3 + Lk=1 k * K = (1)3 + 0 = 1
 H1 = (1 + 1)3 + 2k=1k * k = (2)*+1*1=8+1 = 9
@@ -27,9 +28,8 @@ public class House_number {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Number");
         int n= sc.nextInt();
-        House_number obj1 = new House_number();
         for (int i = 0; i <= n; i++) {
-        System.out.println(obj1.find_number(i)); 
+        System.out.println(find_number(i)); 
         }
     }
 }

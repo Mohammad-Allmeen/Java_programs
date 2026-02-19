@@ -29,18 +29,23 @@ public class Longest_common_prefix {
         if(strs.length==0||strs==null){
             return " ";
         }
+        int min= Integer.MAX_VALUE;
         String word_1=strs[0];
-        for(int i=0;i<strs.length;i++){
-            String word_2= strs[i];
-         int j=0;
+        for(int i=1;i<strs.length;i++){
+        String word_2= strs[i];
+        int j=0;
             while(j<word_1.length() && j<word_2.length() && word_1.charAt(j)==word_2.charAt(j))
             {
                 j++;
             }
-            if(j==0)
+            if(j==0){
                 return "";
-            
-             word_1= word_1.substring(0,j);
+            }
+            if(j<min){
+                min=j;
+             
+            }
+               word_1= word_1.substring(0,min);
               
         }
         return word_1;
@@ -48,7 +53,7 @@ public class Longest_common_prefix {
     public static void main (String [] args)
     {
         Longest_common_prefix s1 = new Longest_common_prefix();
-        String strs[] = {"flow", "flower", "flight"};
+        String strs[] = {"flow", "flower", "flight", "float"};
         String result1 = s1.longestCommonPrefix(strs);
         System.out.println(result1);
     

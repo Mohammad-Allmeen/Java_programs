@@ -20,22 +20,22 @@ public class MinimumCoinsRequired {
     public static int findMin(int arr[], int v){
 
      int sum=arr[arr.length-1];
-    for (int i = 0; i < arr.length; i++) {
+    for (int i = 0; i < arr.length-1; i++) {
         if(sum+arr[i]==v){
             System.out.println("Minimum two coins required");
             return 0;
         }
     }
     int n=0;
-    for (int i = arr.length-1; i >=0 ; i--) {
+    for (int i = arr.length-2; i >=0 ; i--) {
         if(sum+arr[i]<v){
             sum+=arr[i];
             n=i;
+            break;
         }
     }
    
-
-       for (int i = arr.length-1; i >=0 ; i--) {
+       for (int i = arr.length-2; i >=0 ; i--) {
         if(sum+arr[i]==v&& i!=n){
            System.out.println("3 coins required");
         }

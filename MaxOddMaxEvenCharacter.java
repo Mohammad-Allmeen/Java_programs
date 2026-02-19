@@ -17,6 +17,7 @@ public class MaxOddMaxEvenCharacter {
         return maxOdd;
       }
 
+
          public static int findminEven(String str){
        int count;
        int minEven=Integer.MAX_VALUE;
@@ -32,6 +33,7 @@ public class MaxOddMaxEvenCharacter {
             minEven=count;
         }
     }
+  
         return minEven;
       }
 

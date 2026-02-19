@@ -41,37 +41,3 @@ System.out.println("Number of repeating Character is: "+ n);
 }
 }
 
-/*
-
-     int c=0;
-
-        HashSet<Integer> visited= new HashSet<>();
-        for (int i = 0; i < arr.length; i++) {
-            if(!visited.contains(arr[i]))
-            {
-            int count =1; 
-            for (int j = 0; j < arr.length; j++) {
-                if(j!=i && arr[i]==arr[j]){
-                 System.out.print(arr[i]+ " ");
-                  count++;
-                  break;
-                }
-              
-            }
-            if(count>1){
-                c++;
-            }
-            visited.add(arr[i]);
-        }     
-        }
-
-        LinkedHashSet<Integer> check = new LinkedHashSet<>();// as it contains only unique elements
-        for(int num:arr){
-          check.add(num);
-        }
-        System.out.println("Array after removing the duplicates: ");
-        for (Integer integer : check) {
-            System.out.print(integer+ ", ");
-        }
-        return c;
-*/
