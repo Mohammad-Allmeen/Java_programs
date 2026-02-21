@@ -6,11 +6,10 @@ public class Ap_Gp {
         for (int i = 1; i <= n; i++) {
             sum = sum + a;
             System.out.print(a+" ");
-            a += d;
+            a+=d;
         }
         System.out.println();
         System.out.println("The sum of Ap series is: " + sum);
-
     }
 
     public static void series_GP(){

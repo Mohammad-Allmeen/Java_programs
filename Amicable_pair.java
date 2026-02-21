@@ -17,10 +17,6 @@ The sum of divisor of 284 is = 220
 
  */
 
-
-
-
-
 import java.util.*;
 
 public class Amicable_pair {

@@ -12,7 +12,7 @@ Example
 Input
 input 1 : 7
 input 2 : 11 22 12 24 13 26 14
-input 3 : 52
+input 3 : 5
 
 Output
 25
@@ -29,7 +29,7 @@ Total Sum = 13 + 12 = 25
 
 public class Adjacent_difference {
    public static void main(String[] args){
-    int sum=0;
+  int sum=0;
     int arr[]={3,7,4,8,9,1,9,5};
     for (int i = 5-1; i < arr.length-1; i++) {
      int diff= arr[i]-arr[i+1];
@@ -39,3 +39,17 @@ public class Adjacent_difference {
     System.out.println(sum);
    } 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
