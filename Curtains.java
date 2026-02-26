@@ -46,8 +46,8 @@ public static void main(String[] args){
     int arr[]= {3,42,6,60,14, 12};
     for(int i=0; i<6; i++){
         if(arr[i]>=12){
-            int rem= arr[i]/12;
-            count+=rem;
+            int quotient= arr[i]/12;
+            count+=quotient;
         }
     }
     System.out.println(count);

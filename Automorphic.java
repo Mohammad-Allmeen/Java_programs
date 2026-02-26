@@ -24,21 +24,20 @@ class Automorphic{
     } 
 
     //2nd concept/ approach
+    public static boolean check_auto (int n){
+int sq= (int) Math.pow(n,2);
 
-    public static boolean check_auto(int n){
-        int sq=n*n;
-        int temp=n;
-        while(temp>0){
-            if(sq%10!=temp%10){
-                return false;
-            }
-            sq/=10;
-            temp/=10;
-        }
-        return true;
-    }
+while(n!=0){
+if(n%10!= sq%10){
+return false;
+}
+n/=10;
+sq/=10;
+}
+return true;
+}
     public static void main(String[] args){
-        int n=25;
+        int n=5;
         if(check(n)){
         System.out.println("It is Automorphic");
         }else{
@@ -52,3 +51,6 @@ class Automorphic{
 }
 
 
+/*
+
+*/

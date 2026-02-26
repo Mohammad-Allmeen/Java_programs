@@ -34,8 +34,8 @@ public class VehicleManufacturing {
 
     }
     public static void main(String[] args) {
-        int v=10;
-        int w=25;
-        funcVehicle(v,w);
+        int vehicles=12;
+        int wheels=34;
+        funcVehicle(vehicles,wheels);
     }
 }

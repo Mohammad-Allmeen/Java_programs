@@ -19,9 +19,9 @@ public class DecToAllAndViceVersa {
         
         System.out.println("Binary to Decimal- "+ Integer.parseInt(decToBin,2));
 
-        System.out.println("Binary to Octal- "+ Integer.parseInt(decToOct,8));
+        System.out.println("Octal to Decimal- "+ Integer.parseInt(decToOct,8));
 
-        System.out.println("Binary to Hex.- "+ Integer.parseInt(decToHex,16));
+        System.out.println("Hex to Decimal- "+ Integer.parseInt(decToHex,16));
     }
 }
 

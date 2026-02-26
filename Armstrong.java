@@ -3,20 +3,20 @@ import java.util.Scanner;
 public class Armstrong{
     
    public static boolean armstrong_check(int num){
-    String s=Integer.toString(num);
-    int p=s.length();
-    int sum=0;
-    int check=num;
-    while(num!=0){
-       int rem= num%10;
-       sum = sum+ (int)Math.pow(rem, p);
-       num/=10;
-    }
+   String str= Integer.toString(num);
+   int check=num;
+   int len= str.length();
 
-    if(sum==check){
-        return true;
-    }
-    return false;
+   int sum=0;
+ while(num!=0){
+    int r= num%10;
+    sum=sum+(int) Math.pow(r,len);
+    num/=10;
+ }
+ if(sum==check){
+    return true;
+ }
+ return false;
    }
     public static void main(String [] args){
         
@@ -37,18 +37,3 @@ public class Armstrong{
     }
 }
 
-/*
-int check=num;
-    String s= Integer.toString(num);
-    int len= s.length();
-    int sum=0;
-     while(num!=0){
-     int rem = num%10;
-     sum=sum+ (int) Math.pow(rem, len);
-     num/=10;
-     }
-     if(sum==check){
-        return true;
-     }
-    return false;
-*/

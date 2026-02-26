@@ -48,7 +48,7 @@ public class Array_List {
         // get element  (.get Method)
         System.out.println(intList.get(1));
 
-        //to add element in between (.add Method)
+        //to add element at specific index (.add Method)
         intList.add(6, 100);
         System.out.println(intList);
 

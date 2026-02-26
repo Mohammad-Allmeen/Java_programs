@@ -18,13 +18,12 @@ public class ArrayList_example {
 
      list.add(1,10); //index, element
      System.out.println(list);
-     // set/change element
 
+     // set/change element
      list.set(1,5);
      System.out.println(list);
 
      //remove/delete the element
-
      list.remove(2);
 
 
