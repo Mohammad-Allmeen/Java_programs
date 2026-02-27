@@ -1,17 +1,16 @@
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Count_Frequency {
 
-    //method to count the frequency of the digit 
+    // method to count the frequency of the digit
 
     public static void frequency(int arr[]) {
         int len = arr.length;
         boolean visited[] = new boolean[len];
 
-        for (int i = 0; i < arr.length; i++) 
-        {
-            if (visited[i]) 
-            {
+        for (int i = 0; i < arr.length; i++) {
+            if (visited[i]) {
                 continue;
             }
             int count = 1;
@@ -25,59 +24,66 @@ public class Count_Frequency {
         }
     }
 
-    //method to count the frequency of the letters in the String
+    // method to count the frequency of the letters in the String
 
     public static void frequencyLetter(String str) {
+
         int len = str.length();
         boolean visited[] = new boolean[len];
+        HashSet<Character> vis= new HashSet<>();
 
-        for (int i = 0; i < len; i++) {
 
-            if (visited[i]==true || !Character.isLetter(str.charAt(i))) {
-                continue;
-            }
-
-            int count = 1;
-            for (int j = i + 1; j < len; j++) {
-                if (str.charAt(i) == str.charAt(j)) {
-                    visited[j] = true;
+        int count;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+           if(vis.contains(ch) && !Character.isLetter(ch)){
+           continue;
+           }
+            count = 0;
+            for (int j = 0; j < str.length(); j++) {
+                if (str.charAt(j) == ch) {
                     count++;
+                    //visited[j] = true;
+                    vis.add(ch);
                 }
             }
-
-            System.out.println("The frequency of letter " + str.charAt(i) + " is " + count);
+            System.out.println("The freq of letter " + ch + "is:  " + count);
         }
+
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int arr[] = new int[6];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.nextInt();
-        }
-        frequency(arr);
+        // int arr[] = new int[6];
+        // for (int i = 0; i < arr.length; i++) {
+        // arr[i] = sc.nextInt();
+        // }
+        // frequency(arr);
 
         String str = "Alhamdulillah for Everything 12";
         frequencyLetter(str);
     }
 }
-
 /*
- *   int len= arr.length;
-   
-   boolean visited[]= new boolean[len];
-   for (int i = 0; i < len; i++) {  
-    if(visited[i]==true){
-        continue;
-    }
-    int count=1;
-    for (int j = i+1; j < len; j++) {
-        if(arr[i]==arr[j]){
-            visited[j]=true;
-            count++;
-        }
-    }
-    System.out.println("The frequency of the digit "+ arr[i]+ " is "+ count);
-   }
+ * int len = str.length();
+ * boolean visited[] = new boolean[len];
+ * 
+ * for (int i = 0; i < len; i++) {
+ * 
+ * if (visited[i]==true || !Character.isLetter(str.charAt(i))) {
+ * continue;
+ * }
+ * 
+ * int count = 1;
+ * for (int j = i + 1; j < len; j++) {
+ * if (str.charAt(i) == str.charAt(j)) {
+ * visited[j] = true;
+ * count++;
+ * }
+ * }
+ * 
+ * System.out.println("The frequency of letter " + str.charAt(i) + " is " +
+ * count);
+ * }
  */

@@ -20,7 +20,7 @@ public class Character_print {
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             int n= (int)ch;
-            if((n>=65 && n<=90 )||( n>=97 && n<=122) || n==32){
+            if((n>=65 && n<=90 )||( n>=97 && n<=122) || n==32){ // 32 is the ASCII value of the whitespace
                 System.out.print(ch);
             }
         }
