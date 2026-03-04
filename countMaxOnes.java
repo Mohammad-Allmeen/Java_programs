@@ -1,3 +1,6 @@
+
+
+import java.util.HashSet;
 public class countMaxOnes {
      
     public static int findMaxOnes(int arr[][],int r, int c){
@@ -22,5 +25,6 @@ public class countMaxOnes {
 
         int arr[][]= {{0,1,0,0},{1,1,1,0},{1,1,1,1},{0,1,1,0}};
        System.out.println(findMaxOnes(arr, 3,4)); 
+       
     }
 }

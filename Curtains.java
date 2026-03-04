@@ -30,7 +30,7 @@ total = 9
 public class Curtains {
 
     public static void interest(){
-        int arr[]= {2000,4000,6000, 8000, 10000};
+        int arr[]= {2000,4000,6000,8000, 10000};
         int max=0;
         for(int i=0;i<arr.length;i++){
             if(arr[i]>2000){
