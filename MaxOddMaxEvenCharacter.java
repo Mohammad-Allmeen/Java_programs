@@ -37,10 +37,31 @@ public class MaxOddMaxEvenCharacter {
         return minEven;
       }
 
+      public static void MinMax(int arr[]){
+
+        int len= arr.length;
+        for(int i=0;i<len-1;i++){
+           for(int j=0;j<len-1-i;j++){
+            if(arr[j]>arr[j+1]){
+              int temp= arr[j];
+              arr[j]=arr[j+1];
+              arr[j+1]=temp;
+           }
+           }
+        }
+        System.out.println("Max="+arr[len-1] + "Min="+arr[0]);
+      }
+
     public static void main(String[] args) {
         String str= "aatfurrrrr";
        int max= findmaxOdd(str);
        int min= findminEven(str);
        System.out.println(Math.abs(max-min));
+
+       // function to find Min/max in the array
+
+       int arr[]={6,3,8,9,2,10,1};
+       MinMax(arr);
+
     }
 }
