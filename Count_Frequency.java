@@ -30,18 +30,16 @@ public class Count_Frequency {
     public static void frequencyLetter(String str) {
 
         int len = str.length();
-        boolean visited[] = new boolean[len];
+
         HashSet<Character> vis= new HashSet<>();
-
-
         int count;
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < len; i++) {
             char ch = str.charAt(i);
            if(vis.contains(ch) || !Character.isLetter(ch)){
            continue;
            }
             count = 0;
-            for (int j = 0; j < str.length(); j++) {
+            for (int j = 0; j < len; j++) {
                 if (str.charAt(j) == ch) {
                     count++;
      

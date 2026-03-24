@@ -49,7 +49,7 @@ public class MaxOddMaxEvenCharacter {
            }
            }
         }
-        System.out.println("Max="+arr[len-1] + "Min="+arr[0]);
+        System.out.println("Max="+arr[len-1] + " Min="+arr[0]);
       }
 
     public static void main(String[] args) {
